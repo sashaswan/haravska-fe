@@ -15,7 +15,7 @@ const sessionId = urlParams.get('id');
 
 // If no ID is provided, redirect back to the edit page
 if (!sessionId) {
-    window.location.replace('/edit');
+    window.location.replace('https://sashaswan.github.io/haravska-fe/edit');
 }
 
 // Load the existing session data
@@ -67,7 +67,7 @@ function loadSessionData() {
         error: function (err) {
             console.error("Error loading session data:", err);
             alert("Failed to load the photo session. Redirecting to edit page.");
-            window.location.replace('/edit');
+            window.location.replace('https://sashaswan.github.io/haravska-fe/edit');
         }
     });
 }
@@ -112,7 +112,7 @@ $('#save').click(function () {
         success: function (response) {
             console.log(response);
             alert("Photo session updated successfully!");
-            window.location.replace('/edit');
+            window.location.replace('https://sashaswan.github.io/haravska-fe/edit');
         },
         error: function (err) {
             console.error("Error updating photoset:", err);
@@ -123,7 +123,7 @@ $('#save').click(function () {
 
 $('#logout').click(function () {
     localStorage.clear();
-    window.location.replace('/login');
+    window.location.replace('https://sashaswan.github.io/haravska-fe/login');
 });
 
 function encodeImageFileAsURL(file, callback) {

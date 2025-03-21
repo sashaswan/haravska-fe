@@ -1,13 +1,13 @@
 var data = [
 	{
 		type: 'left',
-		image: '/images/beauty/1.jpg',
+		image: 'https://sashaswan.github.io/haravska-fe/images/beauty/1.jpg',
 		title: 'The Way of Being',
 		model: 'Anastasia Kostiuk',
-		modelAgency: '/ Motherland Agency',
+		modelAgency: 'https://sashaswan.github.io/haravska-fe/ Motherland Agency',
 		modelName: 'Olesha Oleksyuk',
-		style:'Olesha Oleksyuk',
-		link:'/theway',
+		style: 'Olesha Oleksyuk',
+		link: 'https://sashaswan.github.io/haravska-fe/theway',
 		mua: 'Mua:',
 		styleMark: 'Style:'
 	}
@@ -16,18 +16,18 @@ var types = ['left'];
 var templates = {};
 var promises = [];
 for (var i = 0; i < types.length; i++) {
-	var promise = new Promise (function (resolve, reject) {
+	var promise = new Promise(function (resolve, reject) {
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", '/beautyType/' + types[i] + '.html', false);
-	    rawFile.onreadystatechange = function () {
-	        if(rawFile.readyState === 4) {
-	            if(rawFile.status === 200 || rawFile.status == 0) {
+		rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/beautyType/' + types[i] + '.html', false);
+		rawFile.onreadystatechange = function () {
+			if (rawFile.readyState === 4) {
+				if (rawFile.status === 200 || rawFile.status == 0) {
 					templates[types[i]] = rawFile.responseText;
 					resolve();
-	            }
-	        }
-	    }
-	    rawFile.send(null);
+				}
+			}
+		}
+		rawFile.send(null);
 	});
 	promises.push(promise);
 }

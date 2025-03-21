@@ -1,6 +1,6 @@
 $('#logout').click(function () {
 	localStorage.clear();
-	window.location.replace('/login');
+	window.location.replace('https://sashaswan.github.io/haravska-fe/login');
 });
 const tableRow = `
 <div class="row func">

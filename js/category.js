@@ -1,37 +1,37 @@
 const templates = {};
 
 $.categoryName = () => {
-    var results = window.location.href.split('/');
-    return results.reverse()[1];
+	var results = window.location.href.split('https://sashaswan.github.io/haravska-fe/');
+	return results.reverse()[1];
 }
 
 $('title').text($.categoryName().toUpperCase())
 $.ajax({
-    type: "GET",
-    headers: {
-	    "x-access-token": TOKEN
-    },
-    url: `${HOST_URL}/api/v1/categories/${$.categoryName()}`,
-    success: function(data) {
+	type: "GET",
+	headers: {
+		"x-access-token": TOKEN
+	},
+	url: `${HOST_URL}/api/v1/categories/${$.categoryName()}`,
+	success: function (data) {
 		const photoSessions = data.photoSessions.map((photoSession, index) => ({
 			...photoSession,
 			type: index % 2 === 0 ? 'left' : 'right',
 			link: `${window.location.origin}/photo?id=${photoSession._id}`
 		}));
 		getTemplates(photoSessions);
-    }
-}); 
+	}
+});
 
 function getTemplates(photoSessions) {
 	var types = ['left', 'right', 'another'];
 	var promises = [];
 	for (var i = 0; i < types.length; i++) {
-		var promise = new Promise (function (resolve, reject) {
+		var promise = new Promise(function (resolve, reject) {
 			var rawFile = new XMLHttpRequest();
-			rawFile.open("GET", '/categorytype/' + types[i] + '.html', false);
+			rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/categorytype/' + types[i] + '.html', false);
 			rawFile.onreadystatechange = function () {
-				if(rawFile.readyState === 4) {
-					if(rawFile.status === 200 || rawFile.status == 0) {
+				if (rawFile.readyState === 4) {
+					if (rawFile.status === 200 || rawFile.status == 0) {
 						templates[types[i]] = rawFile.responseText;
 						resolve();
 					}
@@ -66,7 +66,7 @@ function buildHtml(data) {
 			template = template
 				.replace('{{showdesign}}', '')
 				.replace('{{/showdesign}}', '');
-		}	
+		}
 		$('.fashionpage').append(template);
 	}
 	$.getScript("../slider/fotorama.js");

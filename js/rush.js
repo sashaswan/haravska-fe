@@ -2,73 +2,73 @@ var data = [
 	{
 		type: 'double',
 		image: [
-			'/images/rush/1.jpg',
-			'/images/rush/2.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/rush/1.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/rush/2.jpg'
 		]
 		title: 'HARAVSKA',
-		circleLeft:'/images/circle/3.svg'
+		circleLeft: 'https://sashaswan.github.io/haravska-fe/images/circle/3.svg'
 	},
 	{
 		type: 'double',
 		image: [
-			'/images/rush/3.jpg',
-			'/images/rush/4.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/rush/3.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/rush/4.jpg'
 		]
 		title: 'Rush',
-		circleLeft:''
+		circleLeft: ''
 	},
 	{
 		type: 'double',
 		image: [
-			'/images/rush/5.jpg',
-			'/images/rush/6.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/rush/5.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/rush/6.jpg'
 		]
 		title: 'HARAVSKA',
-		circleLeft:''
+		circleLeft: ''
 	},
 	{
 		type: 'double',
 		image: [
-			'/images/rush/7.jpg',
-			'/images/rush/8.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/rush/7.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/rush/8.jpg'
 		]
 		title: 'Rush',
-		circleLeft:''
+		circleLeft: ''
 	},
 	{
 		type: 'center',
 		image: [
-			'/images/rush/9.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/rush/9.jpg'
 		]
 		title: 'Rush',
-		circleLeft:''
+		circleLeft: ''
 	},
 	{
 		type: 'double',
 		image: [
-			'/images/rush/10.jpg',
-			'/images/rush/11.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/rush/10.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/rush/11.jpg'
 		]
-		circleLeft:''
+		circleLeft: ''
 	}
-	
+
 ];
 var types = ['center', 'double'];
 var templates = {};
 var promises = [];
 for (var i = 0; i < types.length; i++) {
-	var promise = new Promise (function (resolve, reject) {
+	var promise = new Promise(function (resolve, reject) {
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", '/rushType/' + types[i] + '.html', false);
-	    rawFile.onreadystatechange = function () {
-	        if(rawFile.readyState === 4) {
-	            if(rawFile.status === 200 || rawFile.status == 0) {
+		rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/rushType/' + types[i] + '.html', false);
+		rawFile.onreadystatechange = function () {
+			if (rawFile.readyState === 4) {
+				if (rawFile.status === 200 || rawFile.status == 0) {
 					templates[types[i]] = rawFile.responseText;
 					resolve();
-	            }
-	        }
-	    }
-	    rawFile.send(null);
+				}
+			}
+		}
+		rawFile.send(null);
 	});
 	promises.push(promise);
 }
@@ -89,7 +89,7 @@ function buildHtml() {
 			template = template
 				.replace('{{showdesign}}', '')
 				.replace('{{/showdesign}}', '');
-		}		
+		}
 		$('.rushloop').append(template);
 	}
 	console.log(templates);

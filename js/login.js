@@ -1,16 +1,16 @@
 $.ajax({
-	headers: {
-	    "x-access-token": TOKEN
+    headers: {
+        "x-access-token": TOKEN
     },
     type: "POST",
     url: `${HOST_URL}/api/v1/login`,
-    success: function(data) {
-        window.location.replace('/edit');
+    success: function (data) {
+        window.location.replace('https://sashaswan.github.io/haravska-fe/edit');
     }
 });
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('#loginForm').submit(function() {
+    $('#loginForm').submit(function () {
         $.ajax({
             type: "POST",
             url: `${HOST_URL}/api/v1/login`,
@@ -18,19 +18,19 @@ $(document).ready(function() {
                 email: $("#username").val(),
                 password: $("#password").val()
             },
-            success: function(data) {
+            success: function (data) {
                 const { id, token } = data;
                 localStorage.setItem('userId', id);
                 localStorage.setItem('token', token);
                 $('#error').text('');
-                window.location.replace('/edit');
+                window.location.replace('https://sashaswan.github.io/haravska-fe/edit');
             },
-            error: function(data) {
-	            const response = JSON.parse(data.responseText)
-	            $('#error').text(response.message);
+            error: function (data) {
+                const response = JSON.parse(data.responseText)
+                $('#error').text(response.message);
             }
         });
-        return false; 
+        return false;
     });
 
 });

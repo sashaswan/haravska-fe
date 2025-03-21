@@ -1,44 +1,44 @@
 var templates = {};
 
 $.urlParam = (name) => {
-    var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
-    if (results === null) {
-       return null;
-    }
-    else{
-       return results[1] || 0;
-    }
+	var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+	if (results === null) {
+		return null;
+	}
+	else {
+		return results[1] || 0;
+	}
 }
 
 $.ajax({
 	type: "GET",
 	headers: {
-	    "x-access-token": TOKEN,
-	}, 
+		"x-access-token": TOKEN,
+	},
 	url: `${HOST_URL}/api/v1/photo-sessions/${$.urlParam('id')}`,
-	success: function(data) {
-	    var types = ['center', 'double', 'title'];
+	success: function (data) {
+		var types = ['center', 'double', 'title'];
 		var promises = [];
 		for (var i = 0; i < types.length; i++) {
 			console.log(types[i]);
-			var promise = new Promise (function (resolve, reject) {
+			var promise = new Promise(function (resolve, reject) {
 				var rawFile = new XMLHttpRequest();
 				console.log(types[i]);
-			    rawFile.open("GET", '/photoType/' + types[i] + '.html', false);
-			    rawFile.onreadystatechange = function() {
-			        if(rawFile.readyState === 4) {
-			            if(rawFile.status === 200 || rawFile.status == 0) {
+				rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/photoType/' + types[i] + '.html', false);
+				rawFile.onreadystatechange = function () {
+					if (rawFile.readyState === 4) {
+						if (rawFile.status === 200 || rawFile.status == 0) {
 							templates[types[i]] = rawFile.responseText;
 							resolve();
-			            }
-			        }
-			    }
-			    rawFile.send(null);
+						}
+					}
+				}
+				rawFile.send(null);
 			});
 			promises.push(promise);
 		}
 		Promise.all(promises).then(() => buildHtml(data.sections));
-	} 	
+	}
 });
 function buildHtml(sections) {
 	const orderedSections = sections.sort((first, second) => first._id > second._id ? 1 : -1)

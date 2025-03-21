@@ -1,24 +1,24 @@
 var data = [
 	{
 		type: 'left',
-		image: '/images/portrait/2.jpg',
+		image: 'https://sashaswan.github.io/haravska-fe/images/portrait/2.jpg',
 		title: 'YARYNA',
-		link: '/yaryna',
+		link: 'https://sashaswan.github.io/haravska-fe/yaryna',
 		slider: [
-			'/images/yaryna/slider/1.jpg',
-			'/images/yaryna/slider/2.jpg',
-			'/images/yaryna/slider/3.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/yaryna/slider/1.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/yaryna/slider/2.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/yaryna/slider/3.jpg'
 		]
 	},
 	{
 		type: 'right',
-		image: '/images/portrait/1.png',
+		image: 'https://sashaswan.github.io/haravska-fe/images/portrait/1.png',
 		title: 'MARKO',
-		link: '/marko',
+		link: 'https://sashaswan.github.io/haravska-fe/marko',
 		slider: [
-			'/images/marko/slider/1.jpg',
-			'/images/marko/slider/2.jpg',
-			'/images/marko/slider/3.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/marko/slider/1.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/marko/slider/2.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/marko/slider/3.jpg'
 		]
 	}
 ];
@@ -26,18 +26,18 @@ var types = ['left', 'right'];
 var templates = {};
 var promises = [];
 for (var i = 0; i < types.length; i++) {
-	var promise = new Promise (function (resolve, reject) {
+	var promise = new Promise(function (resolve, reject) {
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", '/portraitType/' + types[i] + '.html', false);
-	    rawFile.onreadystatechange = function () {
-	        if(rawFile.readyState === 4) {
-	            if(rawFile.status === 200 || rawFile.status == 0) {
+		rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/portraitType/' + types[i] + '.html', false);
+		rawFile.onreadystatechange = function () {
+			if (rawFile.readyState === 4) {
+				if (rawFile.status === 200 || rawFile.status == 0) {
 					templates[types[i]] = rawFile.responseText;
 					resolve();
-	            }
-	        }
-	    }
-	    rawFile.send(null);
+				}
+			}
+		}
+		rawFile.send(null);
 	});
 	promises.push(promise);
 }

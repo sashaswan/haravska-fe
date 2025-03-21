@@ -2,15 +2,15 @@ var data = [
 	{
 		type: 'center',
 		image: [
-			'/images/inbloom/1.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/inbloom/1.jpg'
 		]
 		title: 'HARAVSKA',
-		circleLeft: '/images/circle/1.svg'
+		circleLeft: 'https://sashaswan.github.io/haravska-fe/images/circle/1.svg'
 	},
 	{
 		type: 'center',
 		image: [
-			'/images/inbloom/2.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/inbloom/2.jpg'
 		]
 		title: 'In Bloom',
 		circleLeft: ''
@@ -18,16 +18,16 @@ var data = [
 	{
 		type: 'double',
 		image: [
-			'/images/inbloom/3.jpg',
-			'/images/inbloom/4.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/inbloom/3.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/inbloom/4.jpg'
 		]
 		title: 'HARAVSKA',
-		circleLeft: '/images/circle/1.svg'
+		circleLeft: 'https://sashaswan.github.io/haravska-fe/images/circle/1.svg'
 	},
 	{
 		type: 'center',
 		image: [
-			'/images/inbloom/5.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/inbloom/5.jpg'
 		]
 		circleLeft: ''
 	}
@@ -36,18 +36,18 @@ var types = ['center', 'double'];
 var templates = {};
 var promises = [];
 for (var i = 0; i < types.length; i++) {
-	var promise = new Promise (function (resolve, reject) {
+	var promise = new Promise(function (resolve, reject) {
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", '/inbloomType/' + types[i] + '.html', false);
-	    rawFile.onreadystatechange = function () {
-	        if(rawFile.readyState === 4) {
-	            if(rawFile.status === 200 || rawFile.status == 0) {
+		rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/inbloomType/' + types[i] + '.html', false);
+		rawFile.onreadystatechange = function () {
+			if (rawFile.readyState === 4) {
+				if (rawFile.status === 200 || rawFile.status == 0) {
 					templates[types[i]] = rawFile.responseText;
 					resolve();
-	            }
-	        }
-	    }
-	    rawFile.send(null);
+				}
+			}
+		}
+		rawFile.send(null);
 	});
 	promises.push(promise);
 }
@@ -68,7 +68,7 @@ function buildHtml() {
 			template = template
 				.replace('{{showdesign}}', '')
 				.replace('{{/showdesign}}', '');
-		}		
+		}
 		$('.bloomloop').append(template);
 	}
 	console.log(templates);

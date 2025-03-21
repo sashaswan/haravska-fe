@@ -40,7 +40,7 @@ $('#save').click(function () {
 		data,
 		success: function (data) {
 			console.log(data);
-			window.location.replace('/edit');
+			window.location.replace('https://sashaswan.github.io/haravska-fe/edit');
 		}
 	});
 });
@@ -53,5 +53,5 @@ function encodeImageFileAsURL(file, callback) {
 
 $('#logout').click(function () {
 	localStorage.clear();
-	window.location.replace('/login');
+	window.location.replace('https://sashaswan.github.io/haravska-fe/login');
 });

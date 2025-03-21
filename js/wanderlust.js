@@ -2,17 +2,17 @@ var data = [
 	{
 		type: 'double',
 		image: [
-			'/images/wanderlust/1.jpg',
-			'/images/wanderlust/2.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/1.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/2.jpg'
 		]
 		title: 'HARAVSKA',
-		circleLeft: '/images/circle/4.svg'
+		circleLeft: 'https://sashaswan.github.io/haravska-fe/images/circle/4.svg'
 	},
 	{
 		type: 'double',
 		image: [
-			'/images/wanderlust/3.jpg',
-			'/images/wanderlust/4.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/3.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/4.jpg'
 		]
 		title: 'Wanderlust',
 		circleLeft: ''
@@ -20,8 +20,8 @@ var data = [
 	{
 		type: 'double',
 		image: [
-			'/images/wanderlust/5.jpg',
-			'/images/wanderlust/6.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/5.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/6.jpg'
 		]
 		title: 'HARAVSKA',
 		circleLeft: ''
@@ -29,8 +29,8 @@ var data = [
 	{
 		type: 'double',
 		image: [
-			'/images/wanderlust/7.jpg',
-			'/images/wanderlust/8.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/7.jpg',
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/8.jpg'
 		]
 		title: 'Wanderlust',
 		circleLeft: ''
@@ -38,28 +38,28 @@ var data = [
 	{
 		type: 'center',
 		image: [
-			'/images/wanderlust/9.jpg'
+			'https://sashaswan.github.io/haravska-fe/images/wanderlust/9.jpg'
 		]
 		circleLeft: ''
 	}
-	
+
 ];
 var types = ['center', 'double'];
 var templates = {};
 var promises = [];
 for (var i = 0; i < types.length; i++) {
-	var promise = new Promise (function (resolve, reject) {
+	var promise = new Promise(function (resolve, reject) {
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", '/wanderlustType/' + types[i] + '.html', false);
-	    rawFile.onreadystatechange = function () {
-	        if(rawFile.readyState === 4) {
-	            if(rawFile.status === 200 || rawFile.status == 0) {
+		rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/wanderlustType/' + types[i] + '.html', false);
+		rawFile.onreadystatechange = function () {
+			if (rawFile.readyState === 4) {
+				if (rawFile.status === 200 || rawFile.status == 0) {
 					templates[types[i]] = rawFile.responseText;
 					resolve();
-	            }
-	        }
-	    }
-	    rawFile.send(null);
+				}
+			}
+		}
+		rawFile.send(null);
 	});
 	promises.push(promise);
 }
@@ -80,7 +80,7 @@ function buildHtml() {
 			template = template
 				.replace('{{showdesign}}', '')
 				.replace('{{/showdesign}}', '');
-		}	
+		}
 		$('.wanderlust').append(template);
 	}
 	console.log(templates);

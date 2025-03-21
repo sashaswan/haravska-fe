@@ -1,48 +1,48 @@
 var data = [
 	{
 		type: 'left',
-		image: '/images/service/1.png',
+		image: 'https://sashaswan.github.io/haravska-fe/images/service/1.png',
 		title: 'Fashion',
 		description: 'Lookbook / Campaign / Editorial / Promo',
 		boxtitle: 'Fashion',
-		link:'/fashion',
-		link2:'/fashion'
+		link: 'https://sashaswan.github.io/haravska-fe/fashion',
+		link2: 'https://sashaswan.github.io/haravska-fe/fashion'
 	},
 	{
 		type: 'right',
-		image: '/images/service/2.png',
+		image: 'https://sashaswan.github.io/haravska-fe/images/service/2.png',
 		title: 'Beauty',
 		description: 'Make-up / Hair / Accessories',
 		boxtitle: 'Beauty',
-		link:'/beauty',
-		link2:'/beauty'
+		link: 'https://sashaswan.github.io/haravska-fe/beauty',
+		link2: 'https://sashaswan.github.io/haravska-fe/beauty'
 	},
 	{
 		type: 'left',
-		image: '/images/service/3.png',
+		image: 'https://sashaswan.github.io/haravska-fe/images/service/3.png',
 		title: 'Model Test',
 		description: '',
 		boxtitle: 'Model Test',
-		link:'/modeltest',
-		link2:'/modeltest'
+		link: 'https://sashaswan.github.io/haravska-fe/modeltest',
+		link2: 'https://sashaswan.github.io/haravska-fe/modeltest'
 	},
 	{
 		type: 'right',
-		image: '/images/service/4.png',
+		image: 'https://sashaswan.github.io/haravska-fe/images/service/4.png',
 		title: 'Portrait',
 		description: 'Creative / Promo',
 		boxtitle: 'Portrait',
-		link:'/portrait',
-		link2:'/portrait'
+		link: 'https://sashaswan.github.io/haravska-fe/portrait',
+		link2: 'https://sashaswan.github.io/haravska-fe/portrait'
 	},
 	{
 		type: 'left',
-		image: '/images/service/5.png',
+		image: 'https://sashaswan.github.io/haravska-fe/images/service/5.png',
 		title: 'Video',
 		description: 'Fashion Film / Campaign / Lookbook / Backstage / Reportage/ Personal',
 		boxtitle: 'Video',
-		link:'/videopage',
-		link2:'/videopage'
+		link: 'https://sashaswan.github.io/haravska-fe/videopage',
+		link2: 'https://sashaswan.github.io/haravska-fe/videopage'
 	}
 ];
 
@@ -50,18 +50,18 @@ var types = ['left', 'right'];
 var templates = {};
 var promises = [];
 for (var i = 0; i < types.length; i++) {
-	var promise = new Promise (function (resolve, reject) {
+	var promise = new Promise(function (resolve, reject) {
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", '/templates/' + types[i] + '.html', false);
-	    rawFile.onreadystatechange = function () {
-	        if(rawFile.readyState === 4) {
-	            if(rawFile.status === 200 || rawFile.status == 0) {
+		rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/templates/' + types[i] + '.html', false);
+		rawFile.onreadystatechange = function () {
+			if (rawFile.readyState === 4) {
+				if (rawFile.status === 200 || rawFile.status == 0) {
 					templates[types[i]] = rawFile.responseText;
 					resolve();
-	            }
-	        }
-	    }
-	    rawFile.send(null);
+				}
+			}
+		}
+		rawFile.send(null);
 	});
 	promises.push(promise);
 }
