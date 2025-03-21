@@ -45,10 +45,10 @@ $('#save').click(function () {
 	});
 });
 
-function encodeImageFileAsurl('file, callback) {
+function encodeImageFileAsURL(file, callback) {
 	let reader = new FileReader();
 	reader.onloadend = () => callback(reader.result);
-	reader.readAsDataurl('file);
+	reader.readAsDataURL(file);
 }
 
 $('#logout').click(function () {
