@@ -1,7 +1,7 @@
 const templates = {};
 
 $.categoryName = () => {
-	var results = window.location.href.split('https://sashaswan.github.io/haravska-fe/');
+	var results = window.location.href.split('/');
 	return results.reverse()[1];
 }
 
@@ -28,7 +28,7 @@ function getTemplates(photoSessions) {
 	for (var i = 0; i < types.length; i++) {
 		var promise = new Promise(function (resolve, reject) {
 			var rawFile = new XMLHttpRequest();
-			rawFile.open("GET", 'https://sashaswan.github.io/haravska-fe/categorytype/' + types[i] + '.html', false);
+			rawFile.open("GET", '/categorytype/' + types[i] + '.html', false);
 			rawFile.onreadystatechange = function () {
 				if (rawFile.readyState === 4) {
 					if (rawFile.status === 200 || rawFile.status == 0) {
