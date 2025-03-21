@@ -5286,7 +5286,7 @@
 
 								// Optional AJAX dependency, but won't run scripts if not present
 								if (jQuery._evalUrl) {
-									jQuery._evalurl('node.src);
+									jQuery._evalurl(node.src);
 								}
 							} else {
 								jQuery.globalEval(node.textContent.replace(rcleanScript, ""));
