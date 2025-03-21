@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Bold.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-ExtraLight.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Light.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Medium.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Regular.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-Regular.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-ExtraLight.ttf');
+}
+body {
+  margin: auto;
+}
+a:any-link {
+  text-decoration: none;
+}
+.admin {
+  min-height: 2412px;
+  background-color: rgb(241, 241, 241);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 41px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.home {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+[name="logout"] {
+  border: none;
+  background: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(40, 40, 40);
+  position: relative;
+  cursor: pointer;
+}
+[name="logout"]:hover {
+  color: rgb(140, 140, 140);
+}
+[name="logout"]::after {
+  content: "";
+  width: 59px;
+  border-bottom: solid 1px rgb(74, 74, 74);
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.photoset {
+  padding-top: 88px;
+}
+.title_photoset {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(40, 40, 40);
+  margin: 0;
+}
+.option,
+.selected_value {
+  width: 307px;
+  height: 40px;
+  background-color: rgba(216, 216, 216, 0.5);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(40, 40, 40);
+  border: none;
+  cursor: pointer;
+}
+.selected_value:hover {
+  color: rgb(140, 140, 140);
+  box-shadow: 0px 0px 0px 1px black;
+}
+.slider {
+  padding-top: 140px;
+}
+[name="slider"],
+[name="sumbit"] {
+  width: 181px;
+  height: 40px;
+  background-color: rgba(216, 216, 216, 0.5);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: none;
+  display: inline;
+  display: inline-block;
+}
+#add_picture {
+  display: inline-block;
+  padding-left: 79px;
+}
+.info {
+  padding-top: 143px;
+}
+.info_top {
+  padding-top: 98px;
+}
+[name="model"],
+[name="mua"],
+[name="style"],
+[name="designer"],
+[name="name"],
+[name="title"],
+[name="agency"] {
+  width: 260px;
+  height: 58px;
+  border-radius: 1px;
+  border: solid 2px rgb(229, 229, 229);
+  margin-right: 40px;
+  padding-left: 24px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(155, 155, 155);
+  background-color: transparent;
+  cursor: pointer;
+}
+[name="mua"] {
+  margin-top: 98px;
+}
+[name="model"]:focus,
+[name="mua"]:focus,
+[name="style"]:focus,
+[name="designer"]:focus,
+[name="name"]:focus,
+[name="title"]:focus {
+  border: solid 2px rgb(74, 144, 226);
+}
+.add_block {
+  padding-top: 150px;
+}
+[name="add_section"],
+[name="add_title"] {
+  display: inline-block;
+  width: 202px;
+  height: 75px;
+  border-radius: 1px;
+  background-color: rgb(241, 241, 241);
+  border: solid 1px rgb(74, 74, 74);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 75px;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(74, 74, 74);
+  margin-right: 82px;
+  cursor: pointer;
+}
+[name="add_section"]:hover,
+[name="add_title"]:hover {
+  box-shadow: 0 0 0 1px;
+}
+[name="add_section"]:active,
+[name="add_title"]:active {
+  border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgb(241, 241, 241);
+  border: solid 1px rgb(74, 74, 74);
+}
+.pic_type {
+  padding-top: 139px;
+}
+.title_type {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(40, 40, 40);
+}
+.type_rectangle {
+  width: 1160px;
+  height: 399px;
+  background-color: rgba(216, 216, 216, 0.5);
+}
+.choose_type {
+  padding-top: 119px;
+  padding-left: 50px;
+}
+.choose_type label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+[type="radio"] {
+  display: none;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container input:checked ~ .checkmark {
+  background-color: #000000;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.holder label,
+input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.top_center {
+  padding-top: 38px;
+}
+.name_photosesion {
+  padding-top: 40px;
+}
+.rectangle_photosesion {
+  width: 1160px;
+  height: 278px;
+  background-color: rgba(216, 216, 216, 0.5);
+}
+.photosesion {
+  padding-top: 107px;
+  padding-left: 74px;
+}
+[name="photo_sesion"] {
+  width: 388px;
+  height: 64px;
+  background-color: rgba(155, 155, 155, 0.15);
+  border: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding-left: 25px;
+  color: rgb(74, 74, 74);
+}
+.svg {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding-left: 81px;
+  padding-right: 88px;
+  color: rgb(155, 155, 155);
+}
+[name="save"] {
+  width: 202px;
+  height: 75px;
+  border-radius: 1px;
+  background-color: rgb(241, 241, 241);
+  border: solid 1px rgb(74, 74, 74);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 75px;
+  letter-spacing: normal;
+  color: rgb(74, 74, 74);
+  margin-top: 93px;
+  cursor: pointer;
+}
+[name="save"]:hover {
+  box-shadow: 0 0 0 1px;
+}
+select {
+  display: none;
+}
+select + .select .options {
+  display: none;
+}
+.holder {
+  width: 1160px;
+  height: 399px;
+  background-color: rgba(216, 216, 216, 0.5);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.title_inside {
+  width: 1160px;
+  height: 399px;
+  background-color: rgba(216, 216, 216, 0.5);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.select {
+  margin-top: 25px;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(155, 155, 155, 0.15);
+  color: #000000;
+  cursor: pointer;
+}

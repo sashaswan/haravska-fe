@@ -1,0 +1,35 @@
+.not_found_photo {
+  background: url(https://sashaswan.github.io/haravska-fe/images/404.jpg') no-repeat center;
+  height: 100vh;
+  position: relative;
+}
+.not_tittle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+.not_style {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.button_back {
+  max-width: 220px;
+  margin: auto;
+  margin-top: 28px;
+  height: 50px;
+  border-radius: 25px;
+  background-image: linear-gradient(265deg, rgb(40, 40, 40), rgb(51, 51, 51));
+  box-shadow: 3px 2px 23px 0 rgb(201, 158, 103);
+}
+.take_home {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}

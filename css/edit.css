@@ -1,0 +1,78 @@
+.add {
+	width: 229px;
+	height: 59px;
+	border: solid 1px rgb(151, 151, 151);
+	margin-top: 79px;
+}
+.add:hover {
+	box-shadow: 0 0 0 1px;
+}
+.text {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 59px;
+	letter-spacing: normal;
+	text-align: center;
+	color: rgb(155, 155, 155);
+}
+.border {
+	border-bottom: solid 1px rgb(151, 151, 151);
+}
+.border p {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: rgb(155, 155, 155);
+	margin-top: 138px;
+}
+.action p {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	text-align: right;
+	color: rgb(155, 155, 155);
+}
+.func p {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	margin-top: 73px;
+	color: rgb(0, 0, 0);
+}
+.editor {
+	padding-top: 73px;
+	text-align: right;
+}
+.editor li {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: right;
+	display: inline-block;
+	color: rgb(74, 74, 74);
+	padding-right: 33px;
+	cursor: pointer;
+}
+.editor li:hover {
+	color: rgb(174, 174, 174);
+}
+.line {
+	border-right: solid 1px rgb(151, 151, 151);
+}

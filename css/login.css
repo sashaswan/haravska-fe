@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Bold.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-ExtraLight.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Light.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Medium.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Regular.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-Regular.ttf');
+}
+@font-face {
+  font-family: "IBM Plex Sans", sans-serif;
+  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-ExtraLight.ttf');
+}
+#loginForm {
+  text-align: center;
+  margin-top: 50px;
+}
+body {
+  margin: 0;
+}
+a:any-link {
+  text-decoration: none;
+}
+.login_background {
+  background: white;
+  height: 100vh;
+}
+.rectangle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 760px;
+  height: 430px;
+  background-color: rgb(241, 241, 241);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#login {
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+[name="password"],
+[name="username"] {
+  width: 360px;
+  height: 64px;
+  background-color: rgba(229, 229, 229, 0.5);
+  border: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(40, 40, 40);
+  margin-bottom: 39px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+[name="password"]:hover,
+[name="username"]:hover {
+  box-shadow: 0 0 0 1px;
+}
+[name="password"]:focus,
+[name="username"]:focus {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(229, 229, 229, 0.1);
+  border: solid 1px rgb(74, 144, 226);
+}
+[name="password"]::placeholder,
+[name="username"]::placeholder {
+  padding-left: 28px;
+}
+[name="sumbit"] {
+  width: 360px;
+  height: 64px;
+  background-color: rgba(229, 229, 229, 1);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 64px;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+[name="sumbit"]:hover {
+  background-color: rgb(229, 229, 229);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.back_home {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding-top: 25px;
+  text-transform: none;
+}

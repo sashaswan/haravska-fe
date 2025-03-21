@@ -1,0 +1,128 @@
+p {
+    margin-bottom: 0rem;
+}  
+ol, ul {
+    margin-left: 0rem;
+}  
+.about_box {
+	height: 1080px;
+	background: white;
+}
+.top_about {
+	padding-top: 124px;
+}
+.block_about {
+	max-width: 474px;
+	margin: auto;
+}
+.about_title {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 29px;
+	font-weight: 500;
+	line-height: 0.86;
+	color: rgb(40, 40, 40);
+}
+.hi_title {
+	padding-top: 55px;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.73;
+	color: rgb(51, 51, 51);
+}
+.main_text_about {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.73;
+	color: rgb(51, 51, 51);
+	padding-bottom: 50px;
+}
+.lets_about {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.73;
+	color: rgb(51, 51, 51);
+}
+#lets_talk {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 200;
+	text-align: center;
+	color: #1d1d1b;
+	width: 210px;
+	height: 60px;
+	border-radius: 2px;
+	border: solid 2px rgb(5, 59, 92);
+	margin-top: 82px;
+	position: relative;
+	overflow: hidden;
+}
+#lets_talk::before {
+    content: '';
+    width: 166px;
+    height: 7px;
+    margin-left: -85px;
+    background: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: all .3s ease .25s;
+}
+#lets_talk:hover::before {
+    left: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
+    transition: all .2s ease 0s;
+}
+#lets_talk::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    transition: all .2s ease .1s;
+    z-index: -1;
+}
+#lets_talk:hover::after {
+    top: 0;
+    transition: all .2s ease .2s;
+}
+.center_about {
+	max-width: 474px;
+	margin: auto;
+	text-align: center;
+}
+.links_about {
+	max-width: 546px;
+	margin: auto;
+	margin-top: 83px;
+}
+.social_btn {
+	display: inline-block;
+	list-style: none;
+	margin-left: 52px;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.73;
+	color: rgb(168, 133, 88);
+}
+.social_btn:hover {
+	border-bottom: none;
+}
+.width_inst {
+	max-width: 105px;
+	border-bottom: solid 1px rgb(28, 28, 28);
+}
+.width_facebook {
+	max-width: 97px;
+	border-bottom: solid 1px rgb(28, 28, 28);
+}
+.width_vimeo {
+	max-width: 64px;
+	border-bottom: solid 1px rgb(28, 28, 28);
+}

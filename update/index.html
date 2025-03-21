@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update Photoset</title>
+        <meta name="description" content="Haravska photography & videography. Create what you want in your life. When you want really good.">
+        <link rel="shortcut icon" href="https://sashaswan.github.io/haravska-fe/images/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="https://sashaswan.github.io/haravska-fe/css/admin.css" type="text/css">
+        <script src="https://sashaswan.github.io/haravska-fe/js/config.js"></script>
+    </head>
+    <body>
+        <div class="admin">
+            <div class="container">
+                <div class="left">
+                    <a href="https://sashaswan.github.io/haravska-fe/" target="_blank">
+                        <p class="home">www.haravska.com</p>
+                    </a>
+                </div>
+                <div class="right">
+                    <button type="button" name="logout" id="logout">Log out</button>
+                </div>
+                <div class="photoset">
+                    <p class="title_photoset">Update photoset</p>
+                    <select id="category"></select>
+                    <div class="select">
+                        <div class="selected_value">
+                            Select Category
+                        </div>
+                        <div class="options"></div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slider_inline">
+                        <button type="button" name="slider">SLIDER</button>
+                        <form action="" id="add_picture" data-photo="">
+                            <input
+                                type="file"
+                                name="pic"
+                                accept="image/*"
+                                multiple="true"
+                            >
+                            <button type="button" class="upload-image">Upload Image</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="info">
+                    <form>
+                        <input
+                            type="text"
+                            name="title"
+                            placeholder="title:"
+                            id="title"
+                        >
+                        <input
+                            type="text"
+                            name="model"
+                            placeholder="Model:"
+                            id="model"
+                        >
+                        <input
+                            type="text"
+                            name="agency"
+                            placeholder="Agency:"
+                            id="agency"
+                        >
+                        <input
+                            type="text"
+                            name="mua"
+                            placeholder="Mua:"
+                            id="mua"
+                        >
+                        <div class="info_top">
+                            <input
+                                type="text"
+                                name="style"
+                                placeholder="Style:"
+                                id="style"
+                            >
+                            <input
+                                type="text"
+                                name="designer"
+                                placeholder="Designer:"
+                                id="designer"
+                            >
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Name:"
+                                id="name"
+                            >
+                        </div>
+                    </form>
+                </div>
+                <div class="add_block">
+                    <button type="button" name="add_section" id="add_section">Add section</button>
+                    <button type="button" name="add_title" id="add_title">Add title</button>
+                </div>
+                <div id="container"></div>
+                <button type="button" name="save" id="save">Update</button>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://sashaswan.github.io/haravska-fe/js/select.js"></script>
+        <script src="https://sashaswan.github.io/haravska-fe/js/sections.js"></script>
+        <script src="https://sashaswan.github.io/haravska-fe/js/updateSession.js"></script>
+    </body>
+</html>
