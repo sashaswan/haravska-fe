@@ -37,7 +37,7 @@ renderTable();
 function addEventListenersButtons() {
 	$('.edit').click(function () {
 		const id = $(this).closest('.editor').attr('data-id');
-		window.location.replace(`/update?id=${id}`);
+		window.location.replace(`https://sashaswan.github.io/haravska-fe/update?id=${id}`);
 	});
 	$('.delete').click(function () {
 		const id = $(this).closest('.editor').attr('data-id');
