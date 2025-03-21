@@ -16,7 +16,7 @@ $.ajax({
 		const photoSessions = data.photoSessions.map((photoSession, index) => ({
 			...photoSession,
 			type: index % 2 === 0 ? 'left' : 'right',
-			link: `${window.location.origin}/photo?id=${photoSession._id}`
+			link: `${window.location.origin}/haravska-fe/photo?id=${photoSession._id}`
 		}));
 		getTemplates(photoSessions);
 	}
