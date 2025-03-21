@@ -1,42 +1,42 @@
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/Roboto-Light.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/Roboto-Light.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Bold.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Bold.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-ExtraLight.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-ExtraLight.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Light.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Light.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Medium.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Medium.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Regular.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-Regular.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-SemiBold.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/IBMPlexSans-SemiBold.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-Regular.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-Regular.ttf");
 }
 @font-face {
   font-family: "IBM Plex Sans", sans-serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-ExtraLight.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/logo/IBMPlexSans-ExtraLight.ttf");
 }
 @font-face {
   font-family: "Playfair Display", serif;
-  src: url(https://sashaswan.github.io/haravska-fe/fonts/logo/PlayfairDisplay-Regular.ttf');
+  src: url("https://sashaswan.github.io/haravska-fe/fonts/logo/PlayfairDisplay-Regular.ttf");
 }
 .header {
   display: block;

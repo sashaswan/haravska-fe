@@ -1,5 +1,6 @@
 .not_found_photo {
-  background: url(https://sashaswan.github.io/haravska-fe/images/404.jpg') no-repeat center;
+  background: url("https://sashaswan.github.io/haravska-fe/images/404.jpg")
+    no-repeat center;
   height: 100vh;
   position: relative;
 }

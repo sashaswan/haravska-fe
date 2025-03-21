@@ -3,7 +3,8 @@
   background: white;
 }
 .video_rectangle {
-  background: url(https://sashaswan.github.io/haravska-fe/images/video/1.jpg') no-repeat center;
+  background: url("https://sashaswan.github.io/haravska-fe/images/video/1.jpg")
+    no-repeat center;
   height: 818px;
   max-width: 1115px;
   margin: auto;

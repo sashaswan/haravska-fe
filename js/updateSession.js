@@ -126,8 +126,8 @@ $('#logout').click(function () {
     window.location.replace('https://sashaswan.github.io/haravska-fe/login');
 });
 
-function encodeImageFileAsURL(file, callback) {
+function encodeImageFileAsurl('file, callback) {
     let reader = new FileReader();
     reader.onloadend = () => callback(reader.result);
-    reader.readAsDataURL(file);
+    reader.readAsDataurl('file);
 }
